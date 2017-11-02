@@ -6,253 +6,30 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
-    <link rel="stylesheet" href="../static/css/layout.css">
-
-    <style>
-        body {
-            min-width: 1000px;
-            font-size: 12px;
-            background: #fff;
-        }
-
-        .topbar {
-            z-index: 9999;
-            overflow: hidden;
-            width: 100%;
-            height: 28px;
-            background: #0e0f1c;
-            border-bottom: 1px solid #232334;
-        }
-
-        .topbar-wrap {
-            margin: 0 auto;
-            max-width: 1200px;
-            min-width: 1000px;
-            line-height: 28px;
-        }
-
-        .topbar-wrap li {
-            height: 28px;
-            line-height: 18px;
-            display: inline-block;
-        }
-
-        .topbar-wrap li a {
-            color: #FFFFFF;
-        }
-
-        .topbar-wrap li .logo-wrap, .topbar-wrap li .look-wrap, .topbar-wrap li .cost-wrap, .topbar-wrap li .help-wrap {
-            padding: 0 25px;
-            margin: 5px 0;
-            border-right: 1px solid #444444;
-        }
-
-        .topbar-wrap li .logo-wrap {
-            padding-left: 5px;
-        }
-
-        .topbar-wrap li .service-wrap, .topbar-wrap li .user-wrap {
-            padding: 0 25px;
-            margin: 5px 0;
-        }
-
-        .cost-dropdown .dropdown-menu, .user-dropdown .dropdown-menu {
-            display: none;
-        }
-
-        .header {
-            position: absolute;
-            top: 30px;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            z-index: 9995;
-        }
-
-        .header-wrap {
-            margin: 0 auto;
-            max-width: 1200px;
-            min-width: 1000px;
-            line-height: 80px;
-        }
-
-        .header-wrap li {
-            display: inline-block;
-            margin: 0;
-            padding: 0;
-        }
-
-        .header-wrap li a {
-            color: #fff;
-        }
-
-        .header-wrap .header-left {
-            font-size: 22px;
-        }
-
-        .header-wrap .header-right {
-            font-size: 18px;
-        }
-
-        .header-wrap .header-right li {
-            padding: 0 20px;
-        }
-
-        .header-wrap .header-right a.current {
-            padding-bottom: 10px;
-            border-bottom: 2px solid #cccccc;
-        }
-
-        .content {
-            width: 100%;
-            height: 100%;
-            z-index: 999;
-        }
-
-        .content .slide-container {
-            position: relative;
-            margin: 0 auto;
-            min-width: 1000px;
-            width: 100%;
-            height: 550px;
-            overflow: hidden;
-            background-color: #0f0f0f;
-        }
-
-        .content .slide-container .slide-wrap {
-            width: 100%;
-            height: 100%;
-        }
-
-        .content .slide-container .swiper-slide {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .content .slide-container .swiper-slide .slide {
-            background-color: #141f35;
-            background-image: url("../static/img/original/ad.png");
-            background-repeat: no-repeat;
-            background-position: top;
-            background-size: cover;
-            display: block;
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-        }
-
-        .content .slide-container .control-wrap {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 20px;
-            height: 20px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .content .slide-container .control-wrap .pagination {
-            position: static;
-            margin: 0 auto;
-            width: 1000px;
-            text-align: center;
-        }
-
-        .content .slide-container .control-wrap .pagination .page-switch {
-            position: relative;
-            float: none;
-            display: inline-block;
-            padding: 5px;
-            cursor: pointer;
-        }
-
-        .content .slide-container .control-wrap .pagination .page-switch .switch-state {
-            position: relative;
-            width: 52px;
-            height: 2px;
-            border: none;
-            border-radius: 0;
-            background-color: #FFFFFF;
-            opacity: .2;
-            filter: alpha(opacity=20);
-        }
-
-        .content .section-head {
-            height: 200px;
-            padding: 80px 0 60px 0;
-            text-align: center;
-        }
-
-        .content .section-head .title {
-            font-size: 34px;
-            color: #000;
-        }
-
-        .content .section-head .sub-title {
-            font-size: 16px;
-            color: #A3A3A4;
-            margin-top: 20px;
-        }
-
-        .content .platform-operation {
-            width: 100%;
-            height: 570px;
-            background-color: #FFFFFF;
-            background-image: url("../src/img/original/background.png");
-
-        }
-
-        .content .platform-operation .operation-steps {
-            margin: 0 auto;
-            max-width: 1190px;
-            min-width: 990px;
-            width: auto;
-            height: 370px;
-        }
-
-        .content .platform-partner {
-            width: 100%;
-            height: 780px;
-            background-color: #E1E2E6;
-        }
-    </style>
+    <link rel="stylesheet" href="../static/css/oflayout.css">
+    <link rel="stylesheet" href="../static/css/ofindex.css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/jquery.qrcode.min.js"></script>
+    <script src="../static/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="../static/js/setCookie.js"></script>
 </head>
 <body>
-<div class="header">
-    <div class="header-wrap">
-        <div class="header-left f-left">
-            <ul>
-                <li><a href="javascript:void(0)">语音直播</a></li>
-            </ul>
-        </div>
-        <div class="header-right f-right">
-            <ul>
-                <li><a href="javascript:void(0)" class="current">首页</a></li>
-                <li><a href="javascript:void(0)">语音介绍</a></li>
-                <li><a href="javascript:void(0)">产品演示</a></li>
-                <li><a href="javascript:void(0)">开发者手册</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
 <div class="topbar">
     <div class="topbar-wrap">
         <div class="topbar-left f-left">
             <ul class="topinfo-l">
                 <li class="logo">
                     <div class="logo-wrap">
-                        <a href="javascript:void(0)">
-                            <img src="../src/img/test.jpg" height="12" width="60"/>
-                        </a>
+                        <a href="javascript:void(0)">孢子云</a>
                     </div>
                 </li>
+                <li class="slide-pipe">|</li>
                 <li>
                     <div class="look-wrap">
                         <a href="javascript:void(0)">总览</a>
                     </div>
                 </li>
+                <li class="slide-pipe">|</li>
                 <li>
                     <div class="service-wrap">
                         <a href="javascript:void(0)">产品与服务 <i class="caret"></i></a>
@@ -271,21 +48,29 @@
                         </div>
                     </div>
                 </li>
+                <li class="slide-pipe">|</li>
                 <li>
                     <div class="help-wrap">
                         <a href="javascript:void(0)">帮助</a>
                     </div>
                 </li>
+                <li class="slide-pipe">|</li>
                 <li class="user-dropdown">
                     <div class="user-wrap">
-                        <a href="javascript:void(0)">
-                            <i class="p_username">15****9899</i>
-                            <i class="caret"></i>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="javascript:void(0)">资产管理</a>
-                            <a href="javascript:void(0)">用户信息</a>
-                            <a href="javascript:void(0)" class="admin-esc">退出</a>
+                        <div class="user-login">
+                            <a href="javascript:void(0)" id="login-btn">登录</a>
+                        </div>
+
+                        <div class="has-login hidden">
+                            <a href="http://127.0.0.1:2050/v1/view/protect/house.html">
+                                <i class="p_username"></i>
+                                <i class="caret"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="javascript:void(0)">账号信息</a>
+                                <a href="javascript:void(0)">安全设置</a>
+                                <a href="javascript:void(0)" class="admin-esc">退出</a>
+                            </div>
                         </div>
                     </div>
 
@@ -296,88 +81,314 @@
     </div>
 </div>
 
+<div class="header">
+    <div class="header-wrap">
+        <div class="header-left f-left">
+            <ul>
+                <li><a href="javascript:void(0)">语音直播</a></li>
+            </ul>
+        </div>
+        <div class="header-right f-right">
+            <ul>
+                <li><a href="javascript:void(0)">首页</a></li>
+                <li><a href="javascript:void(0)">语音介绍</a></li>
+                <li><a href="javascript:void(0)" class="product-display">产品演示</a></li>
+                <li><a href="javascript:void(0)">开发者手册</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 <div class="content">
     <section class="slide-container">
         <div class="slide-wrap">
             <div class="swiper-slide">
                 <div class="slide">
-                    fdsafdsaf
+                    <div class="slide-img">
+                        <img src="../static/img/original/text01.png" class="text01"/>
+                        <img src="../static/img/original/text02.png" class="text02"/>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="control-wrap">
-            <div class="pagination">
-                <div class="page-switch">
-                    <div class="switch-state"></div>
-                </div>
-                <div class="page-switch">
-                    <div class="switch-state"></div>
-                </div>
-                <div class="page-switch">
-                    <div class="switch-state"></div>
-                </div>
-            </div>
-        </div>
+        <!--<div class="control-wrap">-->
+        <!--<div class="pagination">-->
+        <!--<div class="page-switch">-->
+        <!--<div class="switch-state"></div>-->
+        <!--</div>-->
+        <!--<div class="page-switch">-->
+        <!--<div class="switch-state"></div>-->
+        <!--</div>-->
+        <!--<div class="page-switch">-->
+        <!--<div class="switch-state"></div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
     </section>
+
     <section class="platform-operation">
-        <div class="section-head">
-            <div class="title">语音直播平台运营更有效</div>
-            <div class="sub-title">通过加密模式,成为会员才能收听直播,为您的平台带粉涨粉,大大提升收听的粉丝留存率！</div>
-        </div>
-        <div class="operation-steps">
-            <div class="item">
-                <div class="item-head">
-                    <div class="item-icon"></div>
-                    <div class="item-title">
-                        跨群直播
-                    </div>
-                </div>
-                <div class="item-content">
-                    创建好直播间后,只需要分享一个链接就可以听课讲课,单个直播间支持人数无上限,助你轻轻松松覆盖至少一百个以上微信群。
-                </div>
+        <div class="operation-wrap">
+            <div class="section-head">
+                <div class="title">语音直播平台运营更有效</div>
+                <div class="sub-title">通过加密模式，成为会员才能收听直播，为您的平台带粉涨粉，大大提升收听的粉丝留存率！</div>
             </div>
-            <div class="item">
-                <div class="item-head">
-                    <div class="item-icon"></div>
-                    <div class="item-title">
-                        跨群直播
+            <div class="operation-steps">
+                <div class="items">
+                    <div class="item-wrap slideOnLeft">
+                        <div class="item">
+                            <div class="item-head">
+                                <div class="item-icon icon01"></div>
+                                <div class="item-title">
+                                    跨群直播
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                创建好直播间后,只需要分享一个链接就可以听课讲课,单个直播间支持人数无上限,助你轻轻松松覆盖至少一百个以上微信群。
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="item-content">
-                    创建好直播间后,只需要分享一个链接就可以听课讲课,单个直播间支持人数无上限,助你轻轻松松覆盖至少一百个以上微信群。
-                </div>
-            </div>
-            <div class="item">
-                <div class="item-head">
-                    <div class="item-icon"></div>
-                    <div class="item-title">
-                        跨群直播
+                    <div class="item-wrap slideOnDown">
+                        <div class="item">
+                            <div class="item-head">
+                                <div class="item-icon icon02"></div>
+                                <div class="item-title">
+                                    一键导出
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                支持语音导出,简简单单的几个步骤就可以将录音下载和分发
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="item-content">
-                    创建好直播间后,只需要分享一个链接就可以听课讲课,单个直播间支持人数无上限,助你轻轻松松覆盖至少一百个以上微信群。
-                </div>
-            </div>
-            <div class="item">
-                <div class="item-head">
-                    <div class="item-icon"></div>
-                    <div class="item-title">
-                        跨群直播
+                    <div class="item-wrap slideOnUp">
+                        <div class="item">
+                            <div class="item-head">
+                                <div class="item-icon icon03"></div>
+                                <div class="item-title">
+                                    加密涨粉
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                通过语音直播的加密模式,增强粉丝粘性,让您的平台不断涨粉！
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="item-content">
-                    创建好直播间后,只需要分享一个链接就可以听课讲课,单个直播间支持人数无上限,助你轻轻松松覆盖至少一百个以上微信群。
+                    <div class="item-wrap slideOnRight">
+                        <div class="item">
+                            <div class="item-head">
+                                <div class="item-icon icon04"></div>
+                                <div class="item-title">
+                                    付费分销
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                社群变现利器,付费直播让你的优质内容得到相应的回报。听众更加可以通过分销模式将课程推广给更多的听众,从中获得收益！
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="platform-partner">
-        <div class="section-head">
-            <div class="title">语音直播有声有色</div>
-            <div class="sub-title">采用先进的直播系统架构及音频技术,使您的直播平台高清流畅、低延迟、支持千万级用户同时在线,安全稳定、高效运行</div>
+        <div class="partner-wrap">
+            <div class="section-head">
+                <div class="title">语音直播有声有色</div>
+                <div class="sub-title">采用先进的直播系统架构及音频技术，使您的直播平台高清流畅、低延迟、支持千万级用户同时在线，安全稳定、高效运行</div>
+            </div>
+            <div class="partner-items">
+                <div class="jumei-item item-scale">
+                    <div class="item-img"></div>
+                    <div class="item-title">电子商务网站解决方案</div>
+                </div>
+                <div class="qipai-item item-scale">
+                    <div class="item-img"></div>
+                    <div class="item-title">棋牌游戏网站解决方案</div>
+                </div>
+                <div class="kappa-item item-scale">
+                    <div class="item-img"></div>
+                    <div class="item-title">外贸电商网站解决方案</div>
+                </div>
+                <div class="tv-item item-scale">
+                    <div class="item-img"></div>
+                    <div class="item-title">娱乐直播网站解决方案</div>
+                </div>
+                <div class="duobei-item item-scale">
+                    <div class="item-img"></div>
+                    <div class="item-title">品牌官网解决方案</div>
+                </div>
+                <div class="lufax-item item-scale">
+                    <div class="item-img"></div>
+                    <div class="item-title">互联网金融网站解决方案</div>
+                </div>
+                <div class="shexiao-item item-scale">
+                    <div class="item-img"></div>
+                    <div class="item-title">社交网站解决方案</div>
+                </div>
+                <div class="jiaoyu-item item-scale">
+                    <div class="item-img"></div>
+                    <div class="item-title">教育信息化解决方案</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="live-system">
+        <div class="system-wrap">
+            <div class="section-head">
+                <div class="title">语音直播系统是什么</div>
+                <div class="sub-title" style="text-align: left; width: 800px;">
+                    通过语音、图文等多种直播形式地方，与用户形成有效的直播互动，助你快速达到知识变现的新型直播系统。覆盖多种终端，不仅能够轻松对接微信平台，还能作为独立的语音直播app，搭建您的语音直播综合平台
+                </div>
+            </div>
+            <div class="system-player" id="system-slide">
+                <div class="player-bd">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" target="_blank">
+                                <img src="../static/img/original/product.png" alt="pc端">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" target="_blank">
+                                <img src="../static/img/original/product02.png" alt="移动端">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="platform-brands">
+        <div class="brands-wrap">
+            <div class="section-head">
+                <div class="title">企业级合作伙伴</div>
+                <div class="sub-title">
+                    我们与国内外知名品牌合作，也全力协助新兴品牌，在品牌营销市场取得长远成功。
+                </div>
+            </div>
+            <div class="brands-items">
+                <img src="../static/img/original/cooperation.png" alt="合作伙伴">
+            </div>
+        </div>
+    </section>
+
+    <section class="platform-service">
+        <div class="service-wrap">
+            <div class="service-items">
+                <div class="service-item">
+                    <div class="item-title">混合云基础设施</div>
+                    <ul>
+                        <li><a href="javascript:void(0)" alt="阿里云集成">阿里云集成</a></li>
+                        <li><a href="javascript:void(0)" alt="行业专有云">行业专有云</a></li>
+                        <li><a href="javascript:void(0)" alt="物理裸机">物理裸机</a></li>
+                        <li><a href="javascript:void(0)" alt="托管式私有云">托管式私有云</a></li>
+                        <li><a href="javascript:void(0)" alt="全球云数据中心托管">全球云数据中心托管</a></li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <div class="item-title">网络与连接</div>
+                    <ul>
+                        <li><a href="javascript:void(0)" alt="BGP接入">BGP接入</a></li>
+                        <li><a href="javascript:void(0)" alt="跨数据中心专线">跨数据中心专线</a></li>
+                        <li><a href="javascript:void(0)" alt="弹性混合云专线">弹性混合云专线</a></li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <div class="item-title">服务</div>
+                    <ul>
+                        <li><a href="javascript:void(0)" alt="云咨询">云咨询</a></li>
+                        <li><a href="javascript:void(0)" alt="云迁移">云迁移</a></li>
+                        <li><a href="javascript:void(0)" alt="管家服务">管家服务</a></li>
+                        <li><a href="javascript:void(0)" alt="混合云运营平台">混合云运营平台</a></li>
+                        <li><a href="javascript:void(0)" alt="多云管理平台">多云管理平台</a></li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <div class="item-title">解决方案</div>
+                    <ul>
+                        <li><a href="javascript:void(0)" alt="新金融">新金融</a></li>
+                        <li><a href="javascript:void(0)" alt="新零售">新零售</a></li>
+                        <li><a href="javascript:void(0)" alt="新服务">新服务</a></li>
+                        <li><a href="javascript:void(0)" alt="新技术">新技术</a></li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <div class="item-title">关于</div>
+                    <ul>
+                        <li><a href="javascript:void(0)" alt="了解云科创">了解云科创</a></li>
+                        <li><a href="javascript:void(0)" alt="新闻动态">新闻动态</a></li>
+                        <li><a href="javascript:void(0)" alt="加入我们">加入我们</a></li>
+                        <li><a href="javascript:void(0)" alt="联系我们">联系我们</a></li>
+                        <li><a href="javascript:void(0)" alt="知识库">知识库</a></li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <div class="item-title">云科创</div>
+                    <ul>
+                        <li><a href="javascript:void(0)" alt="云科创网络科技股份有限公司">云科创网络科技股份有限公司</a></li>
+                        <li><a href="javascript:void(0)" alt="400-888-9999">400-888-9999</a></li>
+                        <li>
+                            <a href="javascript:void(0)" alt="二维码">
+                                <img src="" alt="">
+                            </a>
+                        </li>
+                        <li><a href="javascript:void(0)" alt="微信服务号">微信服务号</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 </div>
 
+<div class="footer">
+    <div class="footer-wrap">
+        <p class="footer-text">Copyright© 2017 www.jucaipen1688.com All Rights Reserved.闽ICP备17023476号-1</p>
+    </div>
+</div>
+
+<div class="ui-mask"></div>
+<div class="popover" id="code-popover">
+    <div class="popover-content">
+        <div id="display-code"></div>
+    </div>
+</div>
+
+<div class="main-im">
+    <div id="open_im" class="open-im" style="display: none;">&nbsp;</div>
+    <div class="im_main" id="im_main" style="display: block;">
+        <div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=123456789&amp;site=qq&amp;menu=yes" target="_blank"
+           class="im-qq qq-a" title="在线QQ客服">
+            <div class="qq-container"></div>
+            <div class="qq-hover-c"><img class="img-qq" src="../static/img/qq.png"></div>
+            <span> QQ在线咨询</span>
+        </a>
+        <div class="im-tel">
+            <div>售前咨询热线</div>
+            <div class="tel-num">400-123-45678</div>
+            <div>售后咨询热线</div>
+            <div class="tel-num">010-12345678</div>
+        </div>
+        <div class="im-footer" style="position:relative">
+            <div class="weixing-container">
+                <div class="weixing-show" style="display: none;">
+                    <div class="weixing-txt">微信扫一扫<br>进入客户体验</div>
+                    <!--<img class="weixing-ma" src="/static/img/weixing-ma.jpg">-->
+                    <div class="weixing-ma"></div>
+                    <div class="weixing-sanjiao"></div>
+                    <div class="weixing-sanjiao-big"></div>
+                </div>
+            </div>
+            <div class="go-top"><a href="javascript:;" title="返回顶部"></a></div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
+<script src="../static/js/ofindex.js"></script>

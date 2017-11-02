@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        img
+        {
+            width:100px;
+            height:100px;
+            /*background:red;*/
+            position:relative;
+            animation:mymove 5s 1;
+            animation-timing-function:linear;
+
+            /* Safari and Chrome */
+            -webkit-animation:mymove 5s 1;
+            -webkit-animation-timing-function:linear;
+        }
+
+        @keyframes mymove
+        {
+            from {left:0px;}
+            to {left:200px;}
+        }
+
+        @-webkit-keyframes mymove /* Safari and Chrome */
+        {
+            from {left:0px;}
+            to {left:200px;}
+        }
+    </style>
+</head>
+<body>
+
+<img src="../static/img/original/font01.png" height="127" width="833"/>
+<div></div>
+
+</body>
+</html>
